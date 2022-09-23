@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta content="c88806c0-12ae-417c-9ecb-e4b06b8037d8" name="onetrust-data-domain"> 
+  <meta content="https://tags.tiqcdn.com/utag/vmware/microsites-privacy/prod/utag.js" name="microsites-utag"> 
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+  <script src="//www.vmware.com/files/templates/inc/utag_data.js"></script> 
+  <script src="//tags.tiqcdn.com/utag/vmware/microsites-privacy/prod/utag.sync.js"></script> 
+  <script>function OptanonWrapper() { { window.dataLayer.push({ event: 'OneTrustGroupsUpdated' }); } }</script> 
+  <script>
+        function setGTM(w,d,s,l,i){ w[l]=w[l]||[]; w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'}); var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:''; j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); }
+        if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { setGTM(window,document,'script','dataLayer','GTM-W8CQ8TL'); } else{ waitForOnetrustActiveGroups(); } var timer; function waitForOnetrustActiveGroups() { if (document.cookie.indexOf('OptanonConsent') > -1 && document.cookie.indexOf('groups=') > -1) { clearTimeout(timer); setGTM(window,document,'script','dataLayer','GTM-W8CQ8TL'); } else{ timer=setTimeout(waitForOnetrustActiveGroups, 250); } }
+    </script> 
+  <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" id="Viewport" name="viewport"> 
+  <link rel="stylesheet" type="text/css" media="all" href="/css/main-e2a1c5f17c9ea5b611b2d910081b8520.css"> 
+  <link href="/images/favicon-9d25009f65637a49ac8d91eb1cf7b75e.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"> 
+  <meta name="description" content="Level up your Java code and explore what Spring can do for you."> 
+  <link rel="manifest" href="/manifest-0e3065c2bbd1ef7a320e80861393f1a6.json"> 
+  <meta name="theme-color" content="#6db33f"> 
+  <meta name="apple-mobile-web-app-title" content="spring"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"> 
+  <title>Spring | VMware Spring Runtime</title> 
+  <meta property="og:title" content="VMware Spring Runtime"> 
+  <meta property="og:description" content="Comprehensive support for OpenJDK™, Spring®, and Apache Tomcat® for any enterprise."> 
+  <script src="/js/run_prettify-b8b4abd61389be25d5219fffabfab796.js"></script> 
+ </head> 
+ <body id="support"> 
+  <script src="/js/theme-f367e6936a70ad2e6b3dcb91c6673a9f.js"></script> 
+  <header> 
+   <nav id="nav"> 
+    <div id="nav-inner" class="container flex jc-between ai-center"> 
+     <a id="logo-focus" tabindex="1" href="/"> <img id="springlogo" class="block" src="/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg" alt="Spring"> </a> 
+     <ul id="nav-items" class="flex jc-between"> 
+      <li>
+       <div class="has-menu" id="why-hov">
+        <span tabindex="2">Why Spring</span>
+        <div class="nav-arrow"></div>
+       </div></li> 
+      <li>
+       <div class="has-menu" id="learn-hov">
+        <span tabindex="11">Learn</span>
+        <div class="nav-arrow"></div>
+       </div></li> 
+      <li>
+       <div class="has-menu" id="projects-hov">
+        <span tabindex="17">Projects</span>
+        <div class="nav-arrow"></div>
+       </div></li> 
+      <li><a class="z-5 rel" href="/training" tabindex="30">Training</a></li> 
+      <li><a class="z-5 rel" href="/support" tabindex="31">Support</a></li> 
+      <li><a class="has-menu" id="community-hov"><span tabindex="32">Community</span>
+        <div class="nav-arrow"></div></a></li> 
+      <li> <a id="switch-theme" class="theme-switch"> <span> <i class="fas fa-moon"></i> <i class="fas fa-sun"></i> </span> </a> </li> 
+     </ul> 
+    </div> 
+    <div id="dropdown-menus" class="container rel"> 
+     <div id="scope" class="abs rad-5"></div> 
+     <div id="why-items" class="drop-menu"> 
+      <div id="why-target" class="drop-target"></div> 
+      <ul> 
+       <li><a tabindex="3" href="/why-spring">Overview</a></li> 
+       <li><a tabindex="4" href="/microservices">Microservices</a></li> 
+       <li><a tabindex="5" href="/reactive">Reactive</a></li> 
+       <li><a tabindex="6" href="/event-driven">Event Driven</a></li> 
+       <li><a tabindex="7" href="/cloud">Cloud</a></li> 
+       <li><a tabindex="8" href="/web-applications">Web Applications</a></li> 
+       <li><a tabindex="9" href="/serverless">Serverless</a></li> 
+       <li><a tabindex="10" href="/batch">Batch</a></li> 
+      </ul> 
+     </div> 
+     <div id="learn-items" class="drop-menu"> 
+      <div id="learn-target" class="drop-target"></div> 
+      <ul> 
+       <li><a tabindex="12" href="/learn">Overview</a></li> 
+       <li><a tabindex="13" href="/quickstart">Quickstart</a></li> 
+       <li><a tabindex="14" href="/guides">Guides</a></li> 
+       <li><a tabindex="16" href="/blog">Blog</a></li> 
+      </ul> 
+     </div> 
+     <div id="project-items" class="drop-menu"> 
+      <div id="project-target" class="drop-target"></div> 
+      <ul> 
+       <li><a tabindex="18" href="/projects">Overview</a></li> 
+       <li><a tabindex="19" href="/projects/spring-boot">Spring Boot</a></li> 
+       <li><a tabindex="20" href="/projects/spring-framework">Spring Framework</a></li> 
+       <li><a tabindex="21" href="/projects/spring-cloud">Spring Cloud</a></li> 
+       <li><a tabindex="22" href="/projects/spring-cloud-dataflow">Spring Cloud Data Flow</a></li> 
+       <li><a tabindex="23" href="/projects/spring-data">Spring Data</a></li> 
+       <li><a tabindex="24" href="/projects/spring-integration">Spring Integration</a></li> 
+       <li><a tabindex="25" href="/projects/spring-batch">Spring Batch</a></li> 
+       <li><a tabindex="26" href="/projects/spring-security">Spring Security</a></li> 
+       <li><a tabindex="27" class="blue mb-2 inline-block" href="/projects">View all projects</a></li> 
+       <li class="uppercase smallest">Development Tools</li> 
+       <li><a tabindex="28" href="/tools">Spring Tools 4</a></li> 
+       <li><a tabindex="29" href="https://start.spring.io">Spring Initializr 
+         <svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16">
+          <polyline points="15 10.94 15 15 1 15 1 1 5.06 1" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" />
+          <polyline points="8.93 1 15 1 15 7.07" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" />
+          <line x1="15" y1="1" x2="8" y2="8" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" />
+         </svg></a></li> 
+      </ul> 
+     </div> 
+     <div id="community-items" class="drop-menu"> 
+      <div id="community-target" class="drop-target"></div> 
+      <ul> 
+       <li><a tabindex="33" href="/community">Overview</a></li> 
+       <li><a tabindex="34" href="/events">Events</a></li> 
+       <li><a tabindex="35" href="/team">Team</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </nav> 
+   <div id="mobile-nav-open" class="pointer"> 
+    <div id="hamburger"> 
+     <div class="burger-bar"></div> 
+     <div class="burger-bar"></div> 
+     <div class="burger-bar"></div> 
+    </div> 
+    <svg version="1.1" class="mobile-close pointer" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 14.6 14.6" style="enable-background:new 0 0 14.6 14.6;" xml:space="preserve">
+     <style type="text/css">.st0{fill:none;stroke:#000000;stroke-widdata-th-3;stroke-miterlimit:10;}</style>
+     <title>close</title>
+     <line class="st0" x1="1.5" y1="1.5" x2="13.1" y2="13.1" />
+     <line class="st0" x1="13.1" y1="1.5" x2="1.5" y2="13.1" />
+    </svg> 
+   </div> 
+   <nav id="mobile-nav" class="border-box rel"> 
+    <div class="rel"> 
+     <div id="mobile-why" class="mobile-category flex jc-between ai-center"> 
+      <div class="mobile-title antialiased cursor-d">
+       Why Spring
+      </div> 
+      <div class="mobile-nav-arrow"></div> 
+     </div> 
+     <div id="mobile-why-items" class="mobile-expanded-category"> 
+      <ul> 
+       <li><a href="/why-spring">Overview</a></li> 
+       <li><a href="/microservices">Microservices</a></li> 
+       <li><a href="/reactive">Reactive</a></li> 
+       <li><a href="/event-driven">Event Driven</a></li> 
+       <li><a href="/cloud">Cloud</a></li> 
+       <li><a href="/web-applications">Web Applications</a></li> 
+       <li><a href="/serverless">Serverless</a></li> 
+       <li><a href="/batch">Batch</a></li> 
+      </ul> 
+     </div> 
+     <div id="mobile-learn" class="mobile-category flex jc-between ai-center"> 
+      <div class="mobile-title antialiased cursor-d">
+       Learn
+      </div> 
+      <div class="mobile-nav-arrow"></div> 
+     </div> 
+     <div id="mobile-learn-items" class="mobile-expanded-category"> 
+      <ul> 
+       <li><a href="/learn">Overview</a></li> 
+       <li><a href="/quickstart">Quickstart</a></li> 
+       <li><a href="/guides">Guides</a></li> 
+       <li><a href="/blog">Blog</a></li> 
+      </ul> 
+     </div> 
+     <div id="mobile-projects" class="mobile-category flex jc-between ai-center"> 
+      <div class="mobile-title antialiased cursor-d">
+       Projects
+      </div> 
+      <div class="mobile-nav-arrow"></div> 
+     </div> 
+     <div id="mobile-project-items" class="mobile-expanded-category"> 
+      <ul> 
+       <li><a href="/projects">Overview</a></li> 
+       <li><a href="/projects/spring-boot">Spring Boot</a></li> 
+       <li><a href="/projects/spring-framework">Spring Framework</a></li> 
+       <li><a href="/projects/spring-cloud">Spring Cloud</a></li> 
+       <li><a href="/projects/spring-cloud-dataflow">Spring Cloud Data Flow</a></li> 
+       <li><a href="/projects/spring-data">Spring Data</a></li> 
+       <li><a href="/projects/spring-integration">Spring Integration</a></li> 
+       <li><a href="/projects/spring-batch">Spring Batch</a></li> 
+       <li><a href="/projects/spring-security">Spring Security</a></li> 
+       <li><a class="blue mb-2 inline-block" href="/projects">View all projects</a></li> 
+       <p class="uppercase smallest white">Development Tools</p> 
+       <li><a href="/tools">Spring Tools 4</a></li> 
+       <li><a href="https://start.spring.io">Spring Initializr 
+         <svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16">
+          <polyline points="15 10.94 15 15 1 15 1 1 5.06 1" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" />
+          <polyline points="8.93 1 15 1 15 7.07" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" />
+          <line x1="15" y1="1" x2="8" y2="8" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" />
+         </svg></a></li> 
+      </ul> 
+     </div> 
+     <a href="/training" class="mobile-link block">
+      <div class="mobile-title antialiased">
+       Training
+      </div></a> 
+     <a href="/support" class="mobile-link block">
+      <div class="mobile-title antialiased">
+       Support
+      </div></a> 
+     <div id="mobile-community" class="mobile-category flex jc-between ai-center"> 
+      <div class="mobile-title antialiased cursor-d">
+       Community
+      </div> 
+      <div class="mobile-nav-arrow"></div> 
+     </div> 
+     <div id="mobile-community-items" class="mobile-expanded-category"> 
+      <ul> 
+       <li><a href="/community">Overview</a></li> 
+       <li><a href="/events">Events</a></li> 
+       <li><a href="/team">Team</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </nav> 
+   <div id="search-nav" role="search"> 
+    <div class="container relative"> 
+     <form id="searchheaderform" action="/search" accept-charset="UTF-8" method="get">
+      <input name="utf8" type="hidden" value="?"> 
+      <input type="text" name="q" id="searchheaderinput" autocomplete="off" placeholder="Search for documentation, guides, and posts..."> 
+      <input type="submit" value="" id="searchheadersubmit" data-disable-with=""> 
+     </form> 
+    </div> 
+   </div> 
+  </header> 
+  <div> 
+   <div id="hero" class="rel of-hide" role="Banner"> 
+    <div id="pacman">
+     <div> 
+      <svg class="packman" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 602.76 602.74"> 
+       <g> 
+        <path d="M60.93,483.08c99.72,132,287,158.72,419.66,60.53L298.94,303.23Z" class="shape-color-3" /> 
+        <path d="M117.3,62.84C-13.38,163.64-38.8,351.1,60.93,483.08l238-179.85Z" class="shape-color-4" /> 
+        <path d="M117.28,62.81l0,0c.81-.62,1.57-1.28,2.38-1.9C118.87,61.56,118.08,62.19,117.28,62.81Z" class="shape-color-1" /> 
+        <path d="M537.43,488.86a298.52,298.52,0,0,0,25-36.64q7.33-12.72,13.36-26a301.22,301.22,0,0,0,15.09-40.85q2-7,3.69-14,3.35-14.08,5.35-28.42,1-7.17,1.65-14.37,1.31-14.4,1.24-28.91,0-7.25-.42-14.49a300.94,300.94,0,0,0-5.46-43.31q-1.44-7.17-3.24-14.29-3.58-14.23-8.6-28.2t-11.49-27.52a302.75,302.75,0,0,0-31.73-52.15L298.94,303.23,480.59,543.61c.82-.61,1.66-1.16,2.47-1.77A302,302,0,0,0,537.43,488.86Z" class="shape-color-5" /> 
+        <path d="M541.82,119.7C441.47-13.1,252.48-39.4,119.68,60.94c-.81.62-1.57,1.28-2.38,1.9L298.94,303.23Z" class="shape-color-1" /> 
+       </g> 
+      </svg> 
+     </div>
+    </div> 
+    <div class="container rel z-1"> 
+     <div class="mw-850"> 
+      <p class="h3 bold m-0">Support</p> 
+      <h1 class="h1 antialiased">VMware Spring Runtime</h1> 
+      <p class="mb-4">Comprehensive support for OpenJDK™, Spring, and Apache Tomcat® for any enterprise.</p> 
+      <div id="trio" class="flex jc-between mb-3"> 
+       <div class="third"> 
+        <div class="img">
+         <div> 
+          <svg class="icon-support-1" aria-hidden="true" focusable="false" data-icon="icon-support-1" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 95.86 83.82"> 
+           <g> 
+            <path d="M55.75,62.26a2.49,2.49,0,0,0,.66-2.14H43.05a2.7,2.7,0,0,1,0-5.4h7.29a9.8,9.8,0,0,1-1.89-8.48A10.2,10.2,0,0,1,49,44.77H26.61a5,5,0,0,0-3.41,1.37h0L19.9,48.6,44.65,73.35Z" class="shape-color-4" /> 
+            <path d="M50.34,54.72h3.75a5,5,0,1,0,0-9.95H49a10.2,10.2,0,0,0-.51,1.47A9.8,9.8,0,0,0,50.34,54.72Z" class="shape-color-1" /> 
+            <path d="M94.17,42.32a9.9,9.9,0,0,0-10.51,1.59L64.78,59.36a3.71,3.71,0,0,1-2.48.73H59.64a2.4,2.4,0,0,1-.28,0h-3a2.49,2.49,0,0,1-.66,2.14L44.65,73.35,19.9,48.6,0,63.52l20.72,20.3,5.42-5.39a2.84,2.84,0,0,1,2.25-1.23h33.2s6.93-.25,10.92-4.77L95.28,46.78S97.14,44.32,94.17,42.32Z" class="shape-color-1" /> 
+            <path d="M43.05,54.72a2.7,2.7,0,0,0,0,5.4H56.41a.45.45,0,0,1,0-.11,2.56,2.56,0,0,0-1.54-1.81,10.08,10.08,0,0,1-3.4-2.28,9.72,9.72,0,0,1-1.12-1.2H43.05Z" class="shape-color-3" /> 
+            <path d="M23.2,46.14a5,5,0,0,1,3.41-1.37H49a9.79,9.79,0,0,1,16.33-2.69,10.19,10.19,0,0,1,2.25,3.4A2.52,2.52,0,0,0,69.35,47a2.41,2.41,0,0,0,2.24-.65l11.1-11.09L71.13,23.75a9.52,9.52,0,0,0,4.41-2.51A10,10,0,0,0,61.42,7.12a9.55,9.55,0,0,0-2.52,4.4L47.4,0,36.84,10.56a2.44,2.44,0,0,0-.7,2,2.56,2.56,0,0,0,1.12,1.82,10,10,0,0,1,1.55,1.28A9.8,9.8,0,1,1,25,29.48a10.06,10.06,0,0,1-1.27-1.56,2.58,2.58,0,0,0-1.83-1.11,2.46,2.46,0,0,0-2,.69L9.35,38.05,19.9,48.6l3.29-2.47Z" class="shape-color-3" /> 
+           </g> 
+          </svg> 
+         </div>
+        </div> 
+        <h2 class="h3 antialiased">Lean on the Spring experts</h2> 
+        <p>VMware has years of experience working with Spring Framework, Spring Boot, and Apache Tomcat®.</p> 
+       </div> 
+       <div class="third"> 
+        <div class="img">
+         <div> 
+          <svg class="icon-support-2" aria-hidden="true" focusable="false" data-icon="icon-support-2" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 72.8 72.8"> 
+           <g> 
+            <path d="M30.46,11.88V42.34H60.92A30.46,30.46,0,0,0,30.46,11.88Z" class="shape-color-4" /> 
+            <path d="M30.46,11.88A30.46,30.46,0,1,0,60.92,42.34H30.46Z" class="shape-color-1" /> 
+            <path d="M30.46,0V11.88A30.46,30.46,0,0,1,60.92,42.34H72.8A42.34,42.34,0,0,0,30.46,0Z" class="shape-color-3" /> 
+           </g> 
+          </svg> 
+         </div>
+        </div> 
+        <h2 class="h3 antialiased">24x7 support from VMware</h2> 
+        <p>Focus on your work and leave the support to us!</p> 
+       </div> 
+       <div class="third"> 
+        <div class="img">
+         <div> 
+          <svg class="icon-support-3" aria-hidden="true" focusable="false" data-icon="icon-support-3" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 78.55 83.22"> 
+           <g> 
+            <polygon points="15.34 52.09 29.25 37.6 47.33 46.35 37.84 28.64 51.75 14.15 31.98 17.7 31.95 17.64 18.04 32.17 18.08 32.19 15.34 52.09" class="shape-color-4" /> 
+            <circle cx="62.34" cy="23.34" r="4.68" transform="translate(-3.69 14.95) rotate(-13.28)" fill="none" /> 
+            <path d="M77.08,9.58a5,5,0,0,0-3.54-1.45H43.2A5,5,0,0,0,39.56,9.7L32,17.64l0,.06,19.77-3.55L37.84,28.64l9.48,17.71L29.25,37.6,15.34,52.09l2.74-19.9,0,0L3.58,47.27l39.2,35.95L77.2,47a5,5,0,0,0,1.35-3.4V13.11A5,5,0,0,0,77.08,9.58ZM62.34,28A4.68,4.68,0,1,1,67,23.34,4.68,4.68,0,0,1,62.34,28Z" class="shape-color-1" /> 
+            <polygon points="22.5 0 19.77 19.89 0 23.44 18.04 32.17 31.95 17.64 22.5 0" class="shape-color-3" /> 
+           </g> 
+          </svg> 
+         </div>
+        </div> 
+        <h2 class="h3 antialiased">Simple and fair pricing</h2> 
+        <p>VMware Spring Runtime makes OpenJDK support easy. Annual subscriptions are available for Kubernetes pods or CPU cores.</p> 
+       </div> 
+      </div> 
+      <div id="subscription" class="flex ai-center"> 
+       <img src="/images/big-check-a2d8ebc3352b0d09666f39346bcc3f92.svg" alt=""> 
+       <h2 class="h3 m-0 antialiased">Subscription includes OpenJDK binaries, licensing and support</h2> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="content bg-lightblue" role="Main"> 
+    <div class="container"> 
+     <section id="included" class="flex jc-between mb-5"> 
+      <h2 class="h2 antialiased m-0">What's included</h2> 
+      <div class="item third"> 
+       <h3 class="h3 antialiased">Binary downloads</h3> 
+       <ul> 
+        <li class="mb-2">VMware Distribution of OpenJDK or BellSoft Liberica JDK<sup class="smallest">*</sup></li> 
+        <li class="mb-2">Apache Tomcat or VMware tc Server</li> 
+        <li class="mb-2">Spring<sup class="smallest">^</sup></li> 
+        <li>All Updates &amp; Upgrades</li> 
+       </ul> 
+      </div> 
+      <div class="item third"> 
+       <h3 class="h3 antialiased">Premium Support</h3> 
+       <ul> 
+        <li class="mb-2">Global, 24x7 support for over 40 Spring projects, plus OpenJDK and Tomcat</li> 
+        <li class="mb-2">Fast response times</li> 
+        <li class="mb-2">Access to VMware docs, resources, and knowledge base</li> 
+       </ul> 
+      </div> 
+     </section> 
+     <section id="support-list"> 
+      <h2 class="h3 mb-2">Technical support covers</h2> 
+      <div class="flex jc-between mb-6 desktop"> 
+       <div class="col"> 
+        <ul> 
+         <li>OpenJDK<sup class="smallest">*</sup></li> 
+         <li>Apache Tomcat</li> 
+         <li>VMware tc Server</li> 
+         <li>AspectJ</li> 
+         <li>Micrometer</li> 
+         <li>Reactor</li> 
+         <li>Spring AMQP</li> 
+         <li>Spring Batch</li> 
+         <li>Spring Boot</li> 
+         <li>Spring Cloud Commons</li> 
+         <li>Spring Cloud Config</li> 
+         <li>Spring Cloud Netflix</li> 
+         <li>Spring Cloud Bus</li> 
+         <li>Spring Cloud Cloud Foundry</li> 
+         <li>Spring Cloud Open Service Broker</li> 
+         <li>Spring Cloud Consul</li> 
+         <li>Spring Cloud Security</li> 
+         <li>Spring Cloud Sleuth</li> 
+        </ul> 
+       </div> 
+       <div class="col"> 
+        <ul> 
+         <li>Spring Cloud Zookeeper</li> 
+         <li>Spring Cloud Kubernetes</li> 
+         <li>Spring Cloud CLI</li> 
+         <li>Spring Cloud OpenFeign</li> 
+         <li>Spring Cloud Gateway</li> 
+         <li>Spring Cloud Function</li> 
+         <li>Spring Cloud Contract</li> 
+         <li>Spring Cloud Task</li> 
+         <li>Spring Cloud Stream</li> 
+         <li>Spring Cloud Stream Binder for Apache Kafka®</li> 
+         <li>Spring Cloud Stream Binder for RabbitMQ</li> 
+         <li>Spring Cloud Stream Binder for Kafka Streams</li> 
+         <li>Spring Cloud Stream Binder for AWS Kinesis</li> 
+         <li>Spring Cloud Vault</li> 
+         <li>Spring CredHub</li> 
+        </ul> 
+       </div> 
+       <div class="col"> 
+        <ul> 
+         <li>Spring Data for Apache Cassandra™</li> 
+         <li>Spring Data Commons</li> 
+         <li>Spring Data KeyValue</li> 
+         <li>Spring Data LDAP</li> 
+         <li>Spring Data JDBC</li> 
+         <li>Spring Data JPA</li> 
+         <li>Spring Data MongoDB</li> 
+         <li>Spring Data GemFire</li> 
+         <li>Spring Data for Apache Geode™</li> 
+         <li>Spring Data Redis</li> 
+         <li>Spring Data REST</li> 
+         <li>Spring Data Solr</li> 
+         <li>Spring Framework</li> 
+         <li>Spring HATEOAS</li> 
+         <li>Spring Integration (Core modules + Kafka + AWS)</li> 
+         <li>Spring for Apache Kafka®</li> 
+         <li>Spring LDAP</li> 
+        </ul> 
+       </div> 
+       <div class="col"> 
+        <ul> 
+         <li>Spring Kerberos</li> 
+         <li>Spring REST Docs</li> 
+         <li>Spring Retry</li> 
+         <li>Spring Statemachine</li> 
+         <li>Spring Security</li> 
+         <li>Spring Security OAuth</li> 
+         <li>Spring Security SAML</li> 
+         <li>Spring Cloud Data Flow</li> 
+         <li>Spring Session</li> 
+         <li>Spring Session for MongoDB</li> 
+         <li>Spring Session for GemFire/Apache Geode™</li> 
+         <li>Spring Tool Suite</li> 
+         <li>Spring Tools 4</li> 
+         <li>Spring Vault</li> 
+         <li>Spring Cloud Skipper</li> 
+         <li>Spring Shell</li> 
+         <li>Spring Cloud Stream Applications</li> 
+        </ul> 
+       </div> 
+      </div> 
+      <div class="flex jc-between mb-8 mobile"> 
+       <div class="col"> 
+        <ul> 
+         <li>OpenJDK<sup class="smallest">*</sup></li> 
+         <li>Apache Tomcat</li> 
+         <li>VMware tc Server</li> 
+         <li>AspectJ</li> 
+         <li>Micrometer</li> 
+         <li>Reactor</li> 
+         <li>Spring AMQP</li> 
+         <li>Spring Batch</li> 
+         <li>Spring Boot</li> 
+         <li>Spring Cloud Commons</li> 
+         <li>Spring Cloud Config</li> 
+         <li>Spring Cloud Netflix</li> 
+         <li>Spring Cloud Bus</li> 
+         <li>Spring Cloud Cloud Foundry</li> 
+         <li>Spring Cloud Open Service Broker</li> 
+         <li>Spring Cloud Consul</li> 
+         <li>Spring Cloud Security</li> 
+         <li>Spring Cloud Sleuth</li> 
+         <li>Spring Cloud Zookeeper</li> 
+         <li>Spring Cloud Kubernetes</li> 
+         <li>Spring Cloud CLI</li> 
+         <li>Spring Cloud OpenFeign</li> 
+         <li>Spring Cloud Gateway</li> 
+         <li>Spring Cloud Function</li> 
+         <li>Spring Cloud Contract</li> 
+         <li>Spring Cloud Task</li> 
+         <li>Spring Cloud Stream</li> 
+         <li>Spring Cloud Stream Binder for Apache Kafka®</li> 
+         <li>Spring Cloud Stream Binder for RabbitMQ</li> 
+         <li>Spring Cloud Stream Binder for Kafka Streams</li> 
+         <li>Spring Cloud Stream Binder for AWS Kinesis</li> 
+         <li>Spring Cloud Vault</li> 
+         <li>Spring CredHub</li> 
+        </ul> 
+       </div> 
+       <div class="col"> 
+        <ul> 
+         <li>Spring Data for Apache Cassandra™</li> 
+         <li>Spring Data Commons</li> 
+         <li>Spring Data KeyValue</li> 
+         <li>Spring Data LDAP</li> 
+         <li>Spring Data JDBC</li> 
+         <li>Spring Data JPA</li> 
+         <li>Spring Data MongoDB</li> 
+         <li>Spring Data GemFire</li> 
+         <li>Spring Data for Apache Geode™</li> 
+         <li>Spring Data Redis</li> 
+         <li>Spring Data REST</li> 
+         <li>Spring Data Solr</li> 
+         <li>Spring Framework</li> 
+         <li>Spring HATEOAS</li> 
+         <li>Spring Integration (Core modules + Kafka + AWS)</li> 
+         <li>Spring for Apache Kafka®</li> 
+         <li>Spring LDAP</li> 
+         <li>Spring Kerberos</li> 
+         <li>Spring REST Docs</li> 
+         <li>Spring Retry</li> 
+         <li>Spring Statemachine</li> 
+         <li>Spring Security</li> 
+         <li>Spring Security OAuth</li> 
+         <li>Spring Security SAML</li> 
+         <li>Spring Cloud Data Flow</li> 
+         <li>Spring Session</li> 
+         <li>Spring Session for MongoDB</li> 
+         <li>Spring Session for GemFire/Apache Geode™</li> 
+         <li>Spring Tool Suite</li> 
+         <li>Spring Tools 4</li> 
+         <li>Spring Vault</li> 
+         <li>Spring Cloud Skipper</li> 
+         <li>Spring Shell</li> 
+         <li>Spring Cloud Stream Applications</li> 
+        </ul> 
+       </div> 
+      </div> 
+      <p class="caption"> * Restrictions apply &nbsp; ^ Downloads from official sources</p> 
+     </section> 
+    </div> 
+    <section id="contact-form" class="bg-black py-40"> 
+     <div class="flex jc-between container"> 
+      <div class="left"> 
+       <h2 class="h2 antialiased white hide mt-50">Let's talk.</h2> 
+       <p class="hide white">Contact us about VMware Spring Runtime.</p> 
+       <h2 class="h2 antialiased white confirmation">Thank you for your interest!</h2> 
+       <p class="hide white confirmation">We will get back to you shortly.</p> 
+      </div> 
+      <div class="right"> 
+       <br> 
+       <br> 
+       <script src="//app-sj05.marketo.com/js/forms2/js/forms2.min.js"></script> 
+       <form id="mktoForm_7985"></form> 
+       <script>
+                        MktoForms2.loadForm("https://app-sj05.marketo.com", "625-IUJ-009", 7985, function(form){
+                            form.setValues({ "Product_Selection__c": "Pivotal Spring Runtime", "Most_Recent_Lead_Source_Description__c": "Global_Website_Product Contact", "Original_Lead_Source_Description__c":"Global_Website_Product Contact"});
+                            form.onSuccess(function(values, followUpUrl) {
+                                form.getFormElem().hide();
+                                $('.hide').hide();
+                                $('.confirmation').show();
+                                return false;
+                            });
+                        });
+                    </script> 
+       <br> 
+       <br> 
+      </div> 
+     </div> 
+    </section> 
+   </div> 
+  </div>  
+  <footer> 
+   <div id="top"> 
+    <div class="container flex jc-between mx-auto"> 
+     <div id="green-circle-sm"></div> 
+     <img id="circle-grid" src="/images/footer-circles-dc4b03d4edc1f3b7b42a45bdcce411c8.svg" alt=""> 
+     <div class="third"> 
+      <h2 class="bold h3 antialiased">Get ahead</h2> 
+      <p>VMware offers training and certification to turbo-charge your progress.</p> 
+      <a href="/training" class="blue link-animate">Learn more</a> 
+     </div> 
+     <div class="third"> 
+      <h2 class="bold h3 antialiased">Get support</h2> 
+      <p>Spring Runtime offers support and binaries for OpenJDK™, Spring, and Apache Tomcat® in one simple subscription.</p> 
+      <a href="/support" class="blue link-animate">Learn more</a> 
+     </div> 
+     <div class="third"> 
+      <h2 class="bold h3 antialiased">Upcoming events</h2> 
+      <div class="footer-event"> 
+       <p>Check out all the upcoming events in the Spring community.</p> 
+       <a href="/events" class="blue link-animate">View all</a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="bottom"> 
+    <div id="bottom-top"> 
+     <div id="footer-over" class="mx-auto"> 
+      <div class="container flex jc-between mx-auto"> 
+       <div class="left"> 
+        <div class="flex jc-between"> 
+         <div class="footer-column"> 
+          <p><strong><a href="/why-spring">Why Spring</a></strong></p> 
+          <ul> 
+           <li><a href="/microservices">Microservices</a></li> 
+           <li><a href="/reactive">Reactive</a></li> 
+           <li><a href="/event-driven">Event Driven</a></li> 
+           <li><a href="/cloud">Cloud</a></li> 
+           <li><a href="/web-applications">Web Applications</a></li> 
+           <li><a href="/serverless">Serverless</a></li> 
+           <li><a href="/batch">Batch</a></li> 
+          </ul> 
+         </div> 
+         <div class="footer-column"> 
+          <p><strong><a href="/learn">Learn</a></strong></p> 
+          <ul> 
+           <li><a href="/quickstart">Quickstart</a></li> 
+           <li><a href="/guides">Guides</a></li> 
+           <li><a href="/blog">Blog</a></li> 
+          </ul> 
+         </div> 
+         <div class="footer-column"> 
+          <p><strong><a href="/community">Community</a></strong></p> 
+          <ul> 
+           <li><a href="/events">Events</a></li> 
+           <li><a href="/team">Team</a></li> 
+          </ul> 
+         </div> 
+         <div class="footer-column"> 
+          <p><strong><a href="/projects">Projects</a></strong></p> 
+          <p><strong><a href="/training">Training</a></strong></p> 
+          <p><strong><a href="/support">Support</a></strong></p> 
+          <p><strong><a href="/thank-you">Thank You</a></strong></p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="bottom-bottom"> 
+     <div class="flex container jc-between"> 
+      <div id="spring-links"> 
+       <img id="springlogo-foot" src="/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg" alt="Spring"> 
+       <p class="smallest antialiased">© <script>var d = new Date();
+                    document.write(d.getFullYear());</script> <a href="https://www.vmware.com/">VMware</a>, Inc. or its affiliates. <a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p> 
+       <p class="smallest antialiased">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p> 
+      </div> 
+      <div id="social-icons" class="flex jc-between"> 
+       <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube">
+        <svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 40 40">
+         <circle class="cls-1" cx="20" cy="20" r="20" />
+         <path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z" />
+        </svg></a> 
+       <a href="https://github.com/spring-projects" title="Github">
+        <svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 75.93 75.93">
+         <path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z" />
+         <path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z" />
+        </svg></a> 
+       <a href="https://twitter.com/springcentral" title="Twitter">
+        <svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 75.93 75.93">
+         <circle class="cls-1" cx="37.97" cy="37.97" r="37.97" />
+         <path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z" />
+        </svg></a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </footer> 
+  <script src="/js/main-a025bb3500634a64f17be026aaec6b3a.js"></script> 
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon="{&quot;rayId&quot;:&quot;6facb8d0fb84a21d&quot;,&quot;token&quot;:&quot;bffcb8a918ae4755926f76178bfbd26b&quot;,&quot;version&quot;:&quot;2021.12.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>   
+ </body>
+</html>
